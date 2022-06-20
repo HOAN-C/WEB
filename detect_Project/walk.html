@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+<title>Traffic accident prevention</title>
+<meta name="theme-color" content="#308455" />
+<meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<style type="text/css">
+	header {
+		position: relative;
+		z-index: 1;
+		display: block;
+		box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #ffffff;
+		color: rgb(48, 48, 48);
+		width: 520px;
+		font-size: 37px;
+		text-align: center;
+		border-radius: 50px;
+		background-color: #f0f0f0;
+		padding: 10px 50px 20px 50px;
+		margin: 20px 460px 20px 460px;
+	}
+	/* @media screen (max-width: 1200px;) an3d  {
+		
+	} */
+	#title{
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	}
+	#subtitle{
+		color: rgb(114, 114, 114);
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 24px;
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+		background-color: #f0f0f0;
+		border-radius: 50px;
+		box-shadow: 20px 20px 60px #cccccc, -20px -20px 60px #ffffff;
+		margin: auto;
+		padding-bottom: 30px;
+		width: 990px;
+	}
+	#video-holder{
+		margin-top: 35px;
+		padding-left: 20px;
+	}
+	#status{
+		text-align: center;
+		margin-top: 40px;
+	}
+	.src { /*하단 출처 및 링크*/
+		text-align: center;
+		color: lightgray;
+	}
+</style>
+</head>
+<body>
+	<!-- 웹 페이지 상단 상자, 프로젝트 이름 -->
+	<header>
+		<h1 id="title"> Traffic accident prevention </h1>
+		<p id="subtitle"> Alert in case of danger </p>
+	</header>
+
+	<br>
+	<div class="container">
+		<div class="col-sm-6" id="cnv-width">
+		<div id="video-holder"></div>
+		</div>
+		<div class="col-sm-6">
+		<div id="status">
+			<h3 style="color: #085129;">Loading..</h3>
+		</div>
+		</div>
+	</div>
+
+	<!-- 각 출력되는 오디오 플레이어, 안보이게 설정 -->
+	<audio style="display: none;" id="ridersound" controls>
+	<source src="rider.mp3" type="audio/mpeg">
+	</audio>
+	<audio style="display: none;" id="humansound" controls>
+		<source src="human.mp3" type="audio/mpeg">
+	</audio>
+
+<!-- <div>Teachable Machine Image Model - p5.js and ml5.js</div> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+<script src="detect.js"></script>
+<br>
+<br>
+<p class="src">
+	이 콘텐츠는 인공지능 가상 연기자 서비스, 타입캐스트를 활용하여 제작되었습니다.
+	<br>
+	출연진: 호빈이
+	<br>
+	https://typecast.ai
+	<br>
+	thanks to HOAN_C
+</p>
+</body>
+</html>
